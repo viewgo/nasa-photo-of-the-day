@@ -1,8 +1,170 @@
-.App {
-  text-align: center;
+html {
+  font-size: 62.5%;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 10px;
+}
+h1{
+  font-size: 2.8rem;
+}
+h2{
+  font-size: 2rem;  
+}
+h3{
+  font-size: 1.6rem;
+  font-style: italic;
+}
+form, p{
+  font-size: 1.4rem;
+}
+.container {
+  height: 100vh;
 }
 
-.App-logo {
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header p {
+  margin: 0px;
+  font-style: italic;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 90%;
+  height: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+  
+}
+
+
+.view {
+  /* width: 100%; */
+  float: left;
+  border: 1px solid black;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  border-radius: 12px;
+
+  /* */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  /* width: 70%; */
+  margin: 10px auto;
+  /* padding: 20px; */
+  border-radius: 5px;
+  box-shadow: 0 1px 6px -2px #000;
+}
+.view .mask,
+.view .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.view img {
+  display: block;
+  position: relative;
+}
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  padding: 10px;
+  background: #272123a6;
+  margin: 20px 0 0 0;
+}
+.view p {
+  font-size: 1.4rem;
+  position: relative;
+  color: #fff;
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+}
+.view a.info:hover {
+  box-shadow: 0 0 5px #000;
+}
+
+.view-first img {
+  transition: all 0.2s linear;
+}
+.view-first .mask {
+  opacity: 0;
+  background-color: rgba(92, 92, 92, 0.7);
+  transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.view-first p {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.view-first a.info {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover img {
+  transform: scale(1.1);
+}
+.view-first:hover .mask {
+  opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+  transition-delay: 0.2s;
+}
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
@@ -30,4 +192,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
