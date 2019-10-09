@@ -18,12 +18,14 @@ form, p{
   font-size: 1.4rem;
 }
 .container {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 img {
-  max-width: 100%;
+  /* max-width: 100%;
   max-height: 100%;
+  width: 100%;
+  height: 100%; */
 }
 
 .App {
@@ -32,6 +34,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .header {
@@ -59,9 +62,9 @@ img {
 
 
 .view {
+  /* border: 1px solid red; */
   /* width: 100%; */
   float: left;
-  border: 1px solid black;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -73,11 +76,12 @@ img {
   flex-direction: row;
   justify-content: space-evenly;
 
-  /* width: 70%; */
+  width:70%;
+  max-width: 100%;
   margin: 10px auto;
   /* padding: 20px; */
-  border-radius: 5px;
-  box-shadow: 0 1px 6px -2px #000;
+  border-radius: 16px;
+  /* box-shadow: 0 1px 6px -2px #000; */
 }
 .view .mask,
 .view .content {
@@ -89,37 +93,50 @@ img {
   left: 0;
 }
 .view img {
+  /* display: block;
+  position: relative; */
+  
   display: block;
-  position: relative;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 1px 6px -2px #000;
 }
 .view h2 {
   text-transform: uppercase;
   color: #fff;
   text-align: center;
   position: relative;
-  font-size: 1.8rem;
   padding: 10px;
-  background: #272123a6;
+  background: #c0c0c01e;
   margin: 20px 0 0 0;
 }
+.view h3 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  /* background: #272123a6; */
+  margin: 0;
+}
+.view .maskPDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 10%;
+}
+.mask{
+  display: flex;
+  flex-direction: column;
+  
+}
 .view p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: relative;
   color: #fff;
   padding: 10px 20px 20px;
   text-align: center;
-}
-.view a.info {
-  display: inline-block;
-  text-decoration: none;
-  padding: 7px 14px;
-  background: #000;
-  color: #fff;
-  text-transform: uppercase;
-  box-shadow: 0 0 1px #000;
-}
-.view a.info:hover {
-  box-shadow: 0 0 5px #000;
 }
 
 .view-first img {
@@ -127,7 +144,7 @@ img {
 }
 .view-first .mask {
   opacity: 0;
-  background-color: rgba(92, 92, 92, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.4s ease-in-out;
 }
 .view-first h2 {
