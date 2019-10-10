@@ -1,20 +1,31 @@
 import React from "react";
+import { Jumbotron } from 'reactstrap';
+
+
 
 const Photo = props => {
-  if (!props.photo) return <h3>Loading...</h3>;
-  else {
+  if (!props.photo) {
+    return (
+      <div className="loading">
+        Loading...
+      </div>
+    );
+  } else {
     return (
       <>
-        <div className="view view-first">
-          <img src={props.photo.hdurl} alt={props.photo.title} />
-          <div className="mask">
-            <h2>{props.photo.title}</h2>
-            <h3>{props.photo.date}</h3>
-            <div className="maskPDiv">
-              <p>{props.photo.explanation}</p>
-            </div>
-          </div>
-        </div>
+<div>
+      <Jumbotron>
+        <h2>{props.photo.title}</h2>
+        <p>{props.date}</p>
+        
+        <img className="fitted-image" src={props.photo.hdurl} alt={props.photo.title} />
+        <br/>
+        <br/>
+        <p className="lead">{props.photo.explanation}</p>
+        
+      </Jumbotron>
+    </div>
+        
       </>
     );
   }

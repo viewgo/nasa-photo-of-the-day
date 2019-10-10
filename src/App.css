@@ -1,212 +1,54 @@
-html {
-  font-size: 62.5%;
-}
-h1,h2,h3,h4,h5,h6{
-  margin: 10px;
-}
-h1{
-  font-size: 2.8rem;
-}
-h2{
-  font-size: 2rem;  
-}
-h3{
-  font-size: 1.6rem;
-  font-style: italic;
-}
-form, p{
-  font-size: 1.4rem;
-}
-.container {
-  /* height: 100vh; */
-}
 
-img {
-  /* max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%; */
-}
 
 .App {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-}
-.header p {
-  margin: 0px;
-  font-style: italic;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  width: 90%;
-  height: 90%;
-  margin: 10px auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 1px 6px -2px #000;
-  
-}
-
-
-.view {
-  /* border: 1px solid red; */
-  /* width: 100%; */
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-  border-radius: 12px;
-
-  /* */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-
-  width:70%;
-  max-width: 100%;
-  margin: 10px auto;
-  /* padding: 20px; */
-  border-radius: 16px;
-  /* box-shadow: 0 1px 6px -2px #000; */
-}
-.view .mask,
-.view .content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-.view img {
-  /* display: block;
-  position: relative; */
-  
-  display: block;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 1px 6px -2px #000;
-}
-.view h2 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  padding: 10px;
-  background: #c0c0c01e;
-  margin: 20px 0 0 0;
-}
-.view h3 {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  padding: 10px;
-  /* background: #272123a6; */
-  margin: 0;
-}
-.view .maskPDiv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding-bottom: 10%;
-}
-.mask{
-  display: flex;
-  flex-direction: column;
-  
-}
-.view p {
-  font-size: 1.6rem;
-  position: relative;
-  color: #fff;
-  padding: 10px 20px 20px;
-  text-align: center;
-}
-
-.view-first img {
-  transition: all 0.2s linear;
-}
-.view-first .mask {
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: all 0.4s ease-in-out;
-}
-.view-first h2 {
-  transform: translateY(-100px);
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-.view-first p {
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.2s linear;
-}
-.view-first a.info {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
-.view-first:hover img {
-  transform: scale(1.1);
-}
-.view-first:hover .mask {
-  opacity: 1;
-}
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a.info {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.view-first:hover p {
-  transition-delay: 0.1s;
-}
-.view-first:hover a.info {
-  transition-delay: 0.2s;
-}
-
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    text-align: center;
+    height: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1{
+    font-size: 2rem;
   }
-} */
+
+  .header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header h3{
+    padding: 0;
+    margin: 0;
+  }
+
+  .date-selectors{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .button-height{
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fitted-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover; 
+  }
+
+ 
+  
